@@ -1,5 +1,6 @@
 .navigation {
-  display: inline-flex;
+  display: none;
+  // display: inline-flex;
   align-items: baseline;
   width: 1600px;
   border-bottom: 1px solid $whiteColor;
@@ -26,8 +27,27 @@
     }
   }
 
+  &__button {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    @include tablet {
+      display: none;
+    }
+
+    &:hover {
+      color: $blueColor;
+      transition: $transitionTime;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+
   .navigation__bookmarks {
     > li > a {
+      display: none;
       display: inline-flex;
       font-size: 14px;
       font-weight: 500;
@@ -86,10 +106,12 @@
     }
   }
   .navigation__icons {
+    display: none;
     color: rgba(117, 117, 117, 1);
   }
   .navigation__icon {
     > li > a {
+      display: none;
       display: inline-flex;
       font-size: 14px;
       font-weight: 500;
