@@ -1,0 +1,174 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+
+  &__content {
+    background-color: $whiteColor;
+    padding: 20px;
+    border-radius: 4px;
+    width: 528px;
+    position: relative;
+  }
+
+  .modal__button-close {
+    margin-top: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $whiteColor;
+    border: solid 1px $borderBtnCloseColor;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: green;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &.is-hidden {
+    display: none;
+  }
+
+  &__text > p {
+    text-align: center;
+    padding-top: 40px;
+    font-weight: 700;
+  }
+
+  &__form > p {
+    font-weight: 700;
+    color: $blackColor;
+  }
+
+  &__placeholder > label {
+    display: block;
+  }
+
+  &__placeholder-text {
+    color: $greyColor;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  &__input > input {
+    border: 1px solid $borderInputColor;
+    border-radius: 4px;
+    height: 40px;
+    width: 448px;
+    margin-right: 12px;
+    margin-bottom: 10px;
+    outline: none;
+    transition: $transitionTime;
+    transition-timing-function: $transitionFunction;
+
+    &:focus {
+      border-color: $blueColor;
+    }
+  }
+
+  &__input {
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    margin-left: -130px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: $transitionTime;
+    transition-timing-function: $transitionFunction;
+
+    > svg:focus {
+      fill: $blueColor;
+    }
+  }
+
+  &__input-text {
+    padding-left: 40px;
+  }
+
+  &__comment > input {
+    border: 1px solid $borderInputColor;
+    border-radius: 4px;
+    height: 120px;
+    width: 448px;
+    margin-right: 12px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    outline: none;
+    transition: $transitionTime;
+    transition-timing-function: $transitionFunction;
+
+    &:focus {
+      border-color: $blueColor;
+    }
+  }
+
+  &__comment:focus {
+    border-color: $blueColor;
+  }
+
+  .enter-text::placeholder {
+    position: relative;
+    top: -40px;
+    padding-left: 16px;
+    color: $enterTextColor;
+  }
+
+  &__checkbox > input {
+    width: 16px;
+    height: 16px;
+  }
+
+  &__checkbox {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__privacy {
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+    padding-bottom: 30px;
+    padding-top: -50px;
+    color: $greyColor;
+    text-align: center;
+
+    u {
+      text-decoration: underline;
+      color: $blueColor;
+    }
+  }
+
+  &__button-send {
+    display: inline-flex;
+    padding-bottom: 40px;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 200px;
+    background-color: rgba(33, 150, 243, 1);
+    color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(33, 150, 243, 1);
+    border-radius: 4px;
+    font-weight: bold;
+    padding: 0;
+    margin-left: 100px;
+    cursor: pointer;
+    transition: box-shadow 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}

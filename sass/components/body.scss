@@ -1,0 +1,44 @@
+header {
+  width: 1600px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: rgba(33, 33, 33, 1);
+
+  .container {
+    width: $containerWidth;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+  }
+
+  li {
+    list-style-type: none;
+    display: inline;
+  }
+}
+
+main {
+  width: 1600px;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+nav {
+  display: inline-flex;
+  align-items: baseline;
+  width: 1600px;
+  border-bottom: 1px solid rgba(236, 236, 236, 1);
+}

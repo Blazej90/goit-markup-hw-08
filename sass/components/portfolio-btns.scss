@@ -1,0 +1,39 @@
+.portfolio {
+  display: inline-flex;
+  justify-content: space-between;
+  padding-top: 70px;
+  padding-right: 510px;
+  padding-left: 510px;
+  padding-bottom: 40px;
+
+  &__buttons {
+    > li > button {
+      font-size: 16px;
+      font-weight: 500;
+      font-weight: bold;
+      line-height: 1.6;
+      background-color: rgba(245, 244, 250, 1);
+      border-color: rgba(245, 244, 250, 1);
+      padding: 6px 22px 6px 22px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: box-shadow 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover {
+        box-shadow: 1px 7px 18px -6px rgba(0, 0, 0, 0.52);
+        -webkit-box-shadow: 1px 7px 18px -6px rgba(0, 0, 0, 0.52);
+        -moz-box-shadow: 1px 7px 18px -6px rgba(0, 0, 0, 0.52);
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    > li > button:hover {
+      background-color: rgba(33, 150, 243, 1);
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+}

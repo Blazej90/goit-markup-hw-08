@@ -1,0 +1,35 @@
+.description {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  padding-top: 94px;
+  padding-left: 215px;
+  padding-right: 215px;
+
+  &__list {
+    margin-right: 30px;
+
+    & .description__container {
+      background-color: $whiteColor;
+      width: 270px;
+      height: 120px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .description__header {
+    padding-top: 30px;
+    margin: 0px;
+    font-size: 14px;
+    font-weight: bold;
+    box-sizing: border-box;
+  }
+
+  .description__text {
+    font-size: 14px;
+    line-height: 1.7;
+    color: $greyColor;
+    box-sizing: border-box;
+  }
+}

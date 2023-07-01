@@ -1,0 +1,66 @@
+.work {
+  justify-content: center;
+  width: 1600px;
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    padding-top: 94px;
+    padding-right: 624px;
+    padding-left: 624px;
+    padding-bottom: 50px;
+  }
+
+  &__container {
+    padding-right: 200px;
+    padding-left: 200px;
+    padding-bottom: 94px;
+  }
+
+  &__images {
+    > li > a {
+      display: inline-flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-right: 215px;
+      padding-bottom: 94px;
+      padding-left: 215px;
+    }
+  }
+
+  &__img {
+    position: relative;
+    display: inline-block;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    bottom: 25%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $modalBackgroundColor;
+    color: rgba(255, 255, 255, 1);
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    padding: 30px;
+    transition: $transitionTime;
+    transition-timing-function: $transitionFunction;
+  }
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: bold;
+}
