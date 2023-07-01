@@ -1,5 +1,5 @@
 .container {
-  max-width: 480px;
+  max-width: 1200px;
 }
 header {
   width: 1600px;
@@ -42,9 +42,6 @@ nav {
   border-bottom: 1px solid #ececec;
 }
 .navigation {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   -webkit-box-align: baseline;
   -ms-flex-align: baseline;
   align-items: baseline;
@@ -57,26 +54,35 @@ nav {
   padding-bottom: 25px;
   padding-left: 215px;
 }
-
-.navigation__button {
-  width: 30px;
-  height: 30px;
-  background-color: transparent;
-  border: none;
-}
-
 .navigation__logo .web,
 .navigation__logo .studio-header {
   font-family: "Raleway", sans-serif;
   font-size: 26px;
   font-weight: bold;
-  cursor: pointer;
 }
 .navigation__logo .web {
   color: #2196f3;
 }
 .navigation__logo .studio-header {
   color: #212121;
+}
+.navigation__button {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .navigation__button {
+  }
+}
+.navigation__button:hover {
+  color: #2196f3;
+  -webkit-transition: 250ms;
+  transition: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .navigation .navigation__bookmarks > li > a {
   display: -webkit-inline-box;
