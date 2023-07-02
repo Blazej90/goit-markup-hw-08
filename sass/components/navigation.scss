@@ -129,12 +129,143 @@
       }
     }
   }
-  @include mobile {
-  }
+}
 
-  @include tablet {
-  }
+@include mobile {
+  .navigation {
+    display: inline-flex;
+    align-items: baseline;
+    width: 1600px;
+    border-bottom: 1px solid $whiteColor;
 
-  @include desktop {
+    &__logo {
+      padding-top: 24px;
+      padding-right: 93px;
+      padding-bottom: 25px;
+      padding-left: 215px;
+
+      .web,
+      .studio-header {
+        font-family: $logoFont;
+        font-size: 26px;
+        font-weight: bold;
+      }
+
+      .web {
+        color: $blueColor;
+      }
+
+      .studio-header {
+        color: $blackColor;
+      }
+    }
+
+    &__button {
+      width: 30px;
+      height: 30px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        color: $blueColor;
+        transition: $transitionTime;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      }
+    }
+
+    .navigation__bookmarks {
+      > li > a {
+        display: none;
+        display: inline-flex;
+        font-size: 14px;
+        font-weight: 500;
+        color: rgba(33, 33, 33, 1);
+        margin-right: 46px;
+        position: relative;
+
+        &:first-child {
+          margin-left: 93px;
+        }
+
+        &:last-child {
+          padding-right: 50px;
+        }
+
+        &:hover {
+          color: $blueColor;
+          transition: $transitionTime;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        &.active,
+        &.active:hover {
+          color: rgba(33, 150, 243, 1);
+          transition: $transitionTime;
+          transition-timing-function: $transitionFunction;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -27px;
+          left: 0;
+          width: 50%;
+          height: 2px;
+          background-color: $blueColor;
+          border-radius: 5px;
+          border-width: 4px;
+          transition: $transitionTime;
+          transition-timing-function: $transitionFunction;
+        }
+
+        &:hover::after {
+          content: "";
+          position: absolute;
+          bottom: -27px;
+          left: 0;
+          width: 50%;
+          height: 2px;
+          background-color: $blueColor;
+          border-radius: 5px;
+          border-width: 4px;
+          transition: $transitionTime;
+          transition-timing-function: $transitionFunction;
+        }
+      }
+    }
+    .navigation__icons {
+      display: none;
+      color: rgba(117, 117, 117, 1);
+    }
+    .navigation__icon {
+      > li > a {
+        display: none;
+        display: inline-flex;
+        font-size: 14px;
+        font-weight: 500;
+        color: rgba(117, 117, 117, 1);
+        margin-right: 30px;
+
+        &:hover {
+          color: $blueColor;
+          transition: $transitionTime;
+          transition-timing-function: $transitionFunction;
+        }
+      }
+
+      #icon-smartphone,
+      #icon-envelope {
+        display: none;
+        fill: currentColor;
+        cursor: pointer;
+
+        &:hover {
+          fill: $blueColor;
+          transition: $transitionTime;
+          transition-timing-function: $transitionFunction;
+        }
+      }
+    }
   }
 }

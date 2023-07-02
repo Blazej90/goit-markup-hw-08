@@ -1,0 +1,191 @@
+.navigation {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid $whiteColor;
+
+  &__logo {
+    padding: 24px 93px 25px 215px;
+
+    .web,
+    .studio-header {
+      font-family: $logoFont;
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    .web {
+      color: $blueColor;
+    }
+
+    .studio-header {
+      color: $blackColor;
+    }
+  }
+
+  &__button {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+
+    &:hover {
+      color: $blueColor;
+      transition: $transitionTime;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+
+  &__bookmarks,
+  &__icons {
+    display: none;
+  }
+
+  &__bookmarks {
+    > li > a {
+      display: inline-flex;
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(33, 33, 33, 1);
+      margin-right: 46px;
+      position: relative;
+
+      &:first-child {
+        margin-left: 93px;
+      }
+
+      &:last-child {
+        padding-right: 50px;
+      }
+
+      &:hover {
+        color: $blueColor;
+        transition: $transitionTime;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      &.active,
+      &.active:hover {
+        color: rgba(33, 150, 243, 1);
+        transition: $transitionTime;
+        transition-timing-function: $transitionFunction;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -27px;
+        left: 0;
+        width: 50%;
+        height: 2px;
+        background-color: $blueColor;
+        border-radius: 5px;
+        border-width: 4px;
+        transition: $transitionTime;
+        transition-timing-function: $transitionFunction;
+      }
+
+      &:hover::after {
+        content: "";
+        position: absolute;
+        bottom: -27px;
+        left: 0;
+        width: 50%;
+        height: 2px;
+        background-color: $blueColor;
+        border-radius: 5px;
+        border-width: 4px;
+        transition: $transitionTime;
+        transition-timing-function: $transitionFunction;
+      }
+    }
+  }
+
+  &__icons {
+    color: rgba(117, 117, 117, 1);
+
+    .navigation__icon {
+      > li > a {
+        display: inline-flex;
+        font-size: 14px;
+        font-weight: 500;
+        color: rgba(117, 117, 117, 1);
+        margin-right: 30px;
+
+        &:hover {
+          color: $blueColor;
+          transition: $transitionTime;
+          transition-timing-function: $transitionFunction;
+        }
+      }
+
+      #icon-smartphone,
+      #icon-envelope {
+        fill: currentColor;
+        cursor: pointer;
+
+        &:hover {
+          fill: $blueColor;
+          transition: $transitionTime;
+          transition-timing-function: $transitionFunction;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    .navigation__logo {
+      padding: 24px;
+    }
+
+    .navigation__button {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      display: block;
+    }
+
+    .navigation__menu-container {
+      display: none; /* ukryj menu na początku */
+    }
+
+    .navigation__close-button {
+      display: none; /* ukryj przycisk zamykania menu na początku */
+    }
+
+    .navigation__button.js-open-menu:checked ~ .navigation__menu-container {
+      display: block; /* pokaż menu, gdy input jest zaznaczony */
+    }
+
+    .navigation__button.js-open-menu:checked ~ .navigation__close-button {
+      display: block; /* pokaż przycisk zamykania menu, gdy input jest zaznaczony */
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .navigation__button,
+    .navigation__close-button {
+      display: none;
+    }
+
+    .navigation__bookmarks,
+    .navigation__icons {
+      display: block;
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    .navigation__button,
+    .navigation__close-button {
+      display: none;
+    }
+
+    .navigation__bookmarks,
+    .navigation__icons {
+      display: block;
+    }
+  }
+}
