@@ -149,19 +149,19 @@
     }
 
     .navigation__menu-container {
-      display: none; /* ukryj menu na początku */
+      display: none;
     }
 
     .navigation__close-button {
-      display: none; /* ukryj przycisk zamykania menu na początku */
+      display: none;
     }
 
     .navigation__button.js-open-menu:checked ~ .navigation__menu-container {
-      display: block; /* pokaż menu, gdy input jest zaznaczony */
+      display: block;
     }
 
     .navigation__button.js-open-menu:checked ~ .navigation__close-button {
-      display: block; /* pokaż przycisk zamykania menu, gdy input jest zaznaczony */
+      display: block;
     }
   }
 

@@ -666,7 +666,7 @@ h2 {
 .team {
   background-color: #f5f4fa;
 }
-.team__title {
+.team__title > h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -674,9 +674,17 @@ h2 {
   -ms-flex-pack: center;
   justify-content: center;
   padding-top: 94px;
-  padding-right: 695px;
-  padding-left: 695px;
   padding-bottom: 50px;
+}
+@media screen and (min-width: 768px) {
+  .team__title > h2 {
+    padding: 94px 200px 50px;
+  }
+}
+@media screen and (min-width: 480px) {
+  .team__title > h2 {
+    padding: 94px 20px 50px;
+  }
 }
 .team__container {
   display: inline-block;
@@ -685,6 +693,12 @@ h2 {
   padding-right: 200px;
   padding-bottom: 94px;
   padding-left: 200px;
+}
+@media screen and (min-width: 480px) {
+  .team__container {
+    text-align: center;
+    padding: 0;
+  }
 }
 .team__images {
   padding-left: 0;
@@ -779,6 +793,30 @@ h2 {
   cursor: pointer;
   -webkit-transition: fill 0.3s;
   transition: fill 0.3s;
+}
+@media screen and (min-width: 768px) {
+  .team .team__image-person {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .team .team__image-person:nth-child(2n) {
+    margin-left: 0;
+  }
+}
+@media screen and (min-width: 480px) {
+  .team .team__image-person {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .team .team__image-person:nth-child(2n) {
+    margin-left: 0;
+  }
+  .team .team__name,
+  .team .team__position {
+    display: inline;
+  }
 }
 .clients {
   display: -webkit-box;
